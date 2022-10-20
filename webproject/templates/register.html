@@ -1,0 +1,41 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+    <title>Title</title>
+   # <link rel="stylesheet" type="text.css" href="style.css">
+</head>
+<!--<body style="background-color:lightgreen; background-image: url(car.jpg');background-repeat:repeat">-->
+<!--   <div class="login-box">-->
+
+
+<body style="background-image:url('{% static 'images/car.jpg' %}');">
+<!--    <img src="{% static 'images/car.jpg' %}">-->
+<!--<h2>Registration</h2>-->
+
+<form action="register" method="post" >
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter User Name"><br>
+    <input type="text" name="first_name" placeholder="Enter Your First Name"><br>
+    <input type="text" name="last_name" placeholder="Enter Your Last Name"><br>
+    <input type="email" name="email" placeholder="Enter Your Email ID"><br>
+    <input type="password" name="password" placeholder="Enter Your Password"><br>
+    <input type="password" name="password1" placeholder="Confirm Your Password"><br>
+    <input type="submit">
+</form>
+
+<!--{% for msg in messages %}-->
+<!--<h2>{{msg}}</h2>-->
+
+</body>
+</div>
+</body>
+</html>
+{% endfor %}
